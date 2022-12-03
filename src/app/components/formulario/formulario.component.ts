@@ -13,12 +13,12 @@ export class FormularioComponent implements OnInit {
   constructor(private arrCitas: CitasService) {
     this.id = this.arrCitas.getAll().length
     this.formulario = new FormGroup({
-      titulo_libro: new FormControl('Blancanieves y los 7 enanitos', [Validators.required]),
-      pagina: new FormControl(56),
-      autor: new FormControl('Jesucristo', [Validators.required]),
-      texto: new FormControl('Allá mueran ciegos reyes por un palmo más de tierra, que yo tengo por mio, cuanto abarca el mar bravio, a quien nadie impuso leyes', [Validators.required]),
-      fecha_cita: new FormControl('1999-09-25', [Validators.required]),
-      notas: new FormControl('Se la ha  sacado Espronceda')
+      titulo_libro: new FormControl('', [Validators.required]),
+      pagina: new FormControl(),
+      autor: new FormControl('', [Validators.required]),
+      texto: new FormControl('', [Validators.required]),
+      fecha_cita: new FormControl('', [Validators.required]),
+      notas: new FormControl('')
     })
   }
 
