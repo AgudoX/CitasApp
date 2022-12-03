@@ -1,0 +1,34 @@
+<!-- id?: number,
+titulo_libro: string,
+pagina: number,
+autor: string,
+texto: string,
+fecha_cita: Date,
+notas: string -->
+<h2>Nueva cita</h2>
+<form #formu [formGroup]="formulario" (ngSubmit)="onSubmit(formulario)">
+    <div class="formulario">
+        <div>
+            <input type="text" placeholder="Título" formControlName="titulo_libro">
+        </div>
+        <div>
+            <input type="number" placeholder="Página" formControlName="pagina">
+        </div>
+        <div>
+            <input type="text" placeholder="Autor" formControlName="autor">
+        </div>
+        <div>
+            <textarea placeholder="Cita" formControlName="texto"></textarea>
+        </div>
+        <div>
+            <input type="date" placeholder="Fecha Cita" formControlName="fecha_cita">
+        </div>
+        <div>
+            <textarea placeholder="Anotaciones" formControlName="notas"></textarea>
+        </div>
+        <div>
+            <input [disabled]="!formulario.valid" [ngClass]="{'blocked': !formulario.valid}" type="submit"
+                value="Añadir nota">
+        </div>
+    </div>
+</form>

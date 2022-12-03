@@ -1,0 +1,19 @@
+<!-- id?: number,
+titulo_libro: string,
+pagina: number,
+autor: string,
+texto: string,
+fecha_cita: Date,
+notas: string -->
+
+
+<section>
+    <article *ngFor="let cita of arrCitas">
+        <h3>{{cita.titulo_libro}}</h3>
+        <blockquote>{{cita.texto}}</blockquote>
+        <small>{{cita.autor}} - {{cita.fecha_cita | date: 'y-MMMM-dd'}}</small>
+        <p><span>Anotaciones:</span> {{cita.notas}}</p>
+        <i (click)="addFavorite(cita, cita.id!)" [ngClass]="{'favorite': fav(cita)}" class="fa-solid fa-star"></i>
+        <i (click)="deletear(cita,cita.id!)" class="fa-solid fa-trash"></i>
+    </article>
+</section>

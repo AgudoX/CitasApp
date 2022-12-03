@@ -1,0 +1,35 @@
+/* font-family: 'Archivo Black'; */
+/* font-family: 'Judson'; */
+
+/* :root {
+    --color-1: #e41b36;
+    --color-2: #f8dc6c;
+    --color-3: #701322;
+    --color-4: #a15b75;
+    --color-5: #c0d0d3;
+    --color-6: #603540;
+} */
+
+nav ul {
+    background-color: var(--color-2);
+    display: flex;
+    justify-content: end;
+    height: 110px;
+    list-style: none;
+    padding: 20px;
+    gap: 20px;
+}
+
+nav ul li {
+    font-family: 'Judson';
+    font-size: 18px;
+    color: var(--color-3);
+    cursor: pointer;
+    transition: 1s;
+}
+
+nav ul li:hover {
+    font-family: 'Judson';
+    font-size: 20px;
+    color: var(--color-1);
+}

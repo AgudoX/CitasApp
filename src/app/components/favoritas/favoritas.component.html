@@ -1,0 +1,9 @@
+<section>
+    <article *ngFor="let cita of arrFavoritas">
+        <h3>{{cita.titulo_libro}}</h3>
+        <blockquote>{{cita.texto}}</blockquote>
+        <small>{{cita.autor}} - {{cita.fecha_cita | date: 'y-MMMM-dd'}}</small>
+        <p><span>Anotaciones:</span> {{cita.notas}}</p>
+        <i (click)="remove(cita.id!)" class="fa-solid fa-star"></i>
+    </article>
+</section>

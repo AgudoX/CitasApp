@@ -1,0 +1,118 @@
+/* 
+<form [formGroup]="formulario" (ngSubmit)="onSubmit(formulario)">
+<div>
+    <input type="text" placeholder="título" formControlName="titulo_libro">
+</div>
+<div>
+    <input type="number" placeholder="página" formControlName="pagina">
+</div>
+<div>
+    <input type="text" placeholder="Autor" formControlName="autor">
+</div>
+<div>
+    <input type="text" placeholder="cita" formControlName="texto">
+</div>
+<div>
+    <input type="date" placeholder="fecha cita" formControlName="fecha_cita">
+</div>
+<div>
+    <input type="text" placeholder="Anotaciones" formControlName="notas">
+</div>
+<div>
+    <input type="submit" value="Añadir nota">
+</div>
+
+</form> 
+/* font-family: 'Archivo Black'; */
+/* font-family: 'Judson'; */
+
+/* :root {
+    --color-1: #e41b36;
+    --color-2: #f8dc6c;
+    --color-3: #701322;
+    --color-4: #a15b75;
+    --color-5: #c0d0d3;
+    --color-6: #603540;
+} */
+
+h2 {
+    background-color: var(--color-5);
+    text-align: center;
+    width: 100%;
+    text-shadow: 1px 1px 2px black;
+    font-family: 'Archivo Black';
+    padding-top: 40px;
+    color: white;
+    font-size: 32px;
+}
+
+form {
+    padding: 20px;
+    background-color: var(--color-5);
+}
+
+form div.formulario div {
+    width: 100%;
+    margin: 20px auto;
+}
+
+form div.formulario input {
+    width: 50%;
+    height: 50px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    font-size: 18px;
+    background-color: var(--color-5);
+    color: var(--color-4);
+    font-family: 'Judson';
+    border: 2px solid var(--color-4);
+    border-radius: 4px;
+    transition: 1s;
+}
+
+form div.formulario input:hover {
+    box-shadow: 2px 2px 2px 3px black;
+    background-color: var(--color-5);
+}
+
+form div.formulario textarea {
+    width: 50%;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    font-size: 18px;
+    background-color: var(--color-5);
+    color: var(--color-4);
+    font-family: 'Judson';
+    border: 2px solid var(--color-4);
+    border-radius: 4px;
+    transition: .6s;
+    height: fit-content;
+    min-height: 120px;
+}
+
+form div.formulario textarea:hover {
+    box-shadow: 2px 2px 2px 3px black;
+    background-color: var(--color-5);
+}
+
+form div.formulario div input[type='submit'] {
+    background-color: var(--color-3);
+    color: var(--color-5);
+    cursor: pointer;
+    width: 40%;
+}
+
+form div.formulario div input[type='submit'].blocked {
+    background-color: #70132356;
+    cursor: auto;
+}
+
+form div.formulario div input[type='submit'].blocked:hover {
+    box-shadow: none;
+}
+
+form div.formulario div :is(input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched) {
+    border: 3px solid var(--color-1);
+}
